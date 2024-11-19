@@ -4,13 +4,13 @@ using Core.Entities;
 
 namespace Entities.Concrete.Northwind;
 
-public partial class Customer:IEntity
+public class Customer:IEntity
 {
     public string CustomerId { get; set; } = null!;
 
     public string CompanyName { get; set; } = null!;
 
-    public string? ContactName { get; set; }
+    public string ContactName { get; set; }
 
     public string? ContactTitle { get; set; }
 

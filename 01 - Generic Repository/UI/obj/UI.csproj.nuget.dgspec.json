@@ -353,6 +353,9 @@
             "projectReferences": {
               "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Business\\Business.csproj": {
                 "projectPath": "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Business\\Business.csproj"
+              },
+              "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Entities\\Entities.csproj"
               }
             }
           }

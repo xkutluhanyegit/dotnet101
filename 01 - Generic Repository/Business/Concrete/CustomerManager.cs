@@ -18,34 +18,34 @@ namespace Business.Concrete
         {
             _customerDal = customerDal;
         }
-        public IResult Add(Customer entity)
+
+        public async Task<IResult> Add(Customer entity)
         {
-            _customerDal.Add(entity);
+            await _customerDal.AddAsync(entity);
             return new SuccessResult(Messages.AddSuccess);
         }
 
-        public IResult Delete(Customer entity)
+        public async Task<IResult> Delete(Customer entity)
         {
-            _customerDal.Delete(entity);
+            await _customerDal.Delete(entity);
             return new SuccessResult(Messages.DeleteSuccess);
         }
 
-        public IDataResult<List<Customer>> GetAll()
+        public async Task<IDataResult<List<Customer>>> GetAll()
         {
-            var  result = _customerDal.GetAll();
+            var result = await _customerDal.GetAll();
             return new SuccessDataResult<List<Customer>>(result,Messages.ListedSuccess);
         }
 
-        public IDataResult<Customer> GetById(int id)
+        public async Task<IDataResult<Customer>> GetById(int id)
         {
-            var result = _customerDal.Get(x=>x.CustomerId == Convert.ToString(id));
+            var result = await _customerDal.Get(p=> p.CustomerId == id.ToString());
             return new SuccessDataResult<Customer>(result,Messages.GetByIdSuccess);
-
         }
 
-        public IResult Update(Customer entity)
+        public async Task<IResult> Update(Customer entity)
         {
-            _customerDal.Update(entity);
+            await _customerDal.Update(entity);
             return new SuccessResult(Messages.UpdateSuccess);
         }
     }

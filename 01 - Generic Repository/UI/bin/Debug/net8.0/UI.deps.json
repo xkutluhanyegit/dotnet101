@@ -11,7 +11,8 @@
           "Autofac": "8.1.1",
           "Autofac.Extensions.DependencyInjection": "10.0.0",
           "Autofac.Extras.DynamicProxy": "7.1.0",
-          "Business": "1.0.0"
+          "Business": "1.0.0",
+          "Entities": "1.0.0"
         },
         "runtime": {
           "UI.dll": {}

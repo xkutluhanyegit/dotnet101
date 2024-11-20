@@ -3048,7 +3048,8 @@
       "Autofac >= 8.1.1",
       "Autofac.Extensions.DependencyInjection >= 10.0.0",
       "Autofac.Extras.DynamicProxy >= 7.1.0",
-      "Business >= 1.0.0"
+      "Business >= 1.0.0",
+      "Entities >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3078,6 +3079,9 @@
           "projectReferences": {
             "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Business\\Business.csproj": {
               "projectPath": "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Business\\Business.csproj"
+            },
+            "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Entities\\Entities.csproj"
             }
           }
         }

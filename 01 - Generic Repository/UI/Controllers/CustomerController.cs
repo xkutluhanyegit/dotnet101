@@ -26,13 +26,18 @@ namespace UI.Controllers
         }
 
         [HttpGet("")]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var result = await _customerService.GetAll();
+            if (result.Success)
+            {
+                return View(result.Data);
+            }
             return View();
         }
 
         [HttpPost("add")]
-        public IActionResult Add(Customer customer)
+        public async Task<IActionResult> Add(Customer customer)
         {
 
          customer.ContactName = "1";
@@ -42,7 +47,7 @@ namespace UI.Controllers
 
 
 
-          var result = _customerService.Add(customer);
+          var result = await _customerService.Add(customer);
           if (result.Success)
           {
             return View();

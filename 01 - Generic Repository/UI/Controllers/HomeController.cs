@@ -16,9 +16,9 @@ public class HomeController : Controller
         _customerService = customerService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        var data = _customerService.GetAll();
+        var data = await  _customerService.GetAll();
         if (data.Success)
         {
             return View(data.Data);

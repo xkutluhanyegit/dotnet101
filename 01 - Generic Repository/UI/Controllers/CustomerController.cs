@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Business.Abstract;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validaation;
 using Core.CrossCuttingConcerns.Validation;
 using Entities.Concrete.Northwind;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +14,7 @@ using Microsoft.Extensions.Logging;
 
 namespace UI.Controllers
 {
-    [Route("customer")]
+    
     public class CustomerController : Controller
     {
         private readonly ILogger<CustomerController> _logger;
@@ -25,34 +26,35 @@ namespace UI.Controllers
             _customerService = customerService;
         }
 
-        [HttpGet("")]
-        public async Task<IActionResult> Index()
+        
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var result = await _customerService.GetAll();
-            if (result.Success)
-            {
-                return View(result.Data);
-            }
+            
             return View();
         }
 
-        [HttpPost("add")]
+
+
+        
+       
         public async Task<IActionResult> Add(Customer customer)
         {
-
-         customer.ContactName = "1";
-          //TODO: Implement Realistic Implementation
-          
-          ValidationTool.Validate(new CustomerValidator(),customer);
-
-
-
-          var result = await _customerService.Add(customer);
-          if (result.Success)
-          {
+            try
+            {
+                var result = await _customerService.Add(customer);
+                if (result.Success)
+                {
+                    return View();
+                }
+            }
+            catch (ValidationException ex)
+            {
+                
+                
+            }
+            
+            
             return View();
-          }
-          return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

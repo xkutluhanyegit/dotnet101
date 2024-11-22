@@ -2,7 +2,7 @@
     Layout = "_Layout";
 }
 
-@model List<Entities.Concrete.Northwind.Customer>
+
 
 
 <table>
@@ -15,15 +15,7 @@
         </tr>
 
         <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.CompanyName</td>
-                    <td>@item.ContactName</td>
-                    <td>@item.City</td>
-                    <td>@item.Country</td>
-                </tr>
-            }
+            
         </tbody>
     </thead>
 </table>

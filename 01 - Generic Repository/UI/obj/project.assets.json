@@ -1111,6 +1111,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Autofac": "8.1.1",
+          "Autofac.Extensions.DependencyInjection": "10.0.0",
+          "Autofac.Extras.DynamicProxy": "7.1.0",
           "FluentValidation": "11.11.0",
           "Microsoft.EntityFrameworkCore": "8.0.11"
         },
@@ -3049,6 +3052,8 @@
       "Autofac.Extensions.DependencyInjection >= 10.0.0",
       "Autofac.Extras.DynamicProxy >= 7.1.0",
       "Business >= 1.0.0",
+      "Core >= 1.0.0",
+      "DataAccess >= 1.0.0",
       "Entities >= 1.0.0"
     ]
   },
@@ -3079,6 +3084,12 @@
           "projectReferences": {
             "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Business\\Business.csproj": {
               "projectPath": "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Business\\Business.csproj"
+            },
+            "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Core\\Core.csproj"
+            },
+            "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\DataAccess\\DataAccess.csproj"
             },
             "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\kutluhan.yegit\\Desktop\\dotnet101\\01 - Generic Repository\\Entities\\Entities.csproj"

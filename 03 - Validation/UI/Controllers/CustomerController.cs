@@ -34,14 +34,9 @@ namespace UI.Controllers
         [HttpPost("add")]
         public IActionResult Add(Customer customer)
         {
-
-         customer.ContactName = "1";
-          //TODO: Implement Realistic Implementation
           
           ValidationTool.Validate(new CustomerValidator(),customer);
-
-
-
+          
           var result = _customerService.Add(customer);
           if (result.Success)
           {
